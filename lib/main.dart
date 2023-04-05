@@ -1,41 +1,39 @@
 import 'package:flutter/material.dart';
-import 'package:wed_app/screens/bottom_navigation.dart';
-import 'constant.dart';
-import 'screens/pre_login.dart';
+import 'package:matrimony_app/splash.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp();
+
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
       theme: ThemeData(
-       // brightness: Brightness.light,
-        primaryColor: kPrimaryColor,
-        scaffoldBackgroundColor: kBackgroundColor,
-        textTheme: TextTheme(
+        // brightness: Brightness.light,
+        primaryColor: Colors.red,
+        scaffoldBackgroundColor: Colors.white,
+        textTheme: const TextTheme(
           headline1: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.bold,
           ),
-          button: TextStyle(color: kPrimaryColor, fontSize: 18),
+          button: TextStyle(color: Colors.black, fontSize: 18),
         ),
-        inputDecorationTheme: InputDecorationTheme(
+        inputDecorationTheme: const InputDecorationTheme(
           enabledBorder: UnderlineInputBorder(
             borderSide: BorderSide(
-              color: Colors.black.withOpacity(0.9),
+              color: Colors.black,
             ),
           ),
         ),
       ),
-      home: const LoginScreen(),
+      debugShowCheckedModeBanner: false,
+      home: SplashScreen(),
     );
   }
 }

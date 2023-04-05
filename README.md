@@ -1,4 +1,4 @@
-# wed_app
+# matrimony_app
 
 A new Flutter project.
 
